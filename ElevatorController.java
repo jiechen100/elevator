@@ -99,9 +99,9 @@ public class ElevatorController {
 
 	public Command nextCommand() {
 		Command cmd = modeStrategy.nextCommand(requests);
-		if (cmd == null) {
-			return new Command(ControlCommandEnum.STOP);
-		}
+		// if (cmd == null) {
+		// return new Command(ControlCommandEnum.STOP);
+		// }
 
 		return cmd;
 	}
