@@ -4,7 +4,7 @@ The Elevator Problem
 
 Imagine a high-rise building that has 12 floors and exactly one elevator. The elevator can travel to all floors in the building and it receives commands in the following format:
 
-6-4
+startFloor - endFloor
 
 For example, if the elevator receives the commands 4-1, 3-2, 1-5, and 6-8 it would mean that someone will get on at floor 4 and off at floor 1, someone else will get on at floor 3 and off at floor 2, and so on. In addition, the elevator can operate in two unique modes (described below), which specify the priority and optimizations that the elevator should use when completing a set of commands.
 Your task is to write a program that requires an argument for the name of a text file containing multiple sets of commands as an input, and for each set of commands writes to standard output both the path that the elevator will take and the total distance in floors that the elevator must travel. In addition, your program must accept an argument to specify which mode the elevator will operate in throughout the application lifecycle. The mode argument should follow the filename argument. 
