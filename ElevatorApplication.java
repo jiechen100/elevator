@@ -1,5 +1,3 @@
-package com.jie.elevator;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -80,6 +78,7 @@ public class ElevatorApplication {
 	}
 
 	public static void main(String[] args) {
+
 		ElevatorApplication app = new ElevatorApplication();
 		if (!app.validateArgs(args)) {
 			System.exit(1);
