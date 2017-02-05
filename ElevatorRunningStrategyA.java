@@ -1,5 +1,3 @@
-package com.jie.elevator;
-
 import java.util.List;
 
 public class ElevatorRunningStrategyA implements ElevatorRunningModeStrategy {
@@ -15,3 +13,4 @@ public class ElevatorRunningStrategyA implements ElevatorRunningModeStrategy {
 		return cmd;
 	}
 }
+
