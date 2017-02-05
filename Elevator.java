@@ -1,5 +1,3 @@
-package com.jie.elevator;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,30 +49,36 @@ public class Elevator implements ElevatorBehavior {
 	}
 
 	public void start(int startFloor) {
-		this.currentFloor=startFloor;
+		this.currentFloor = startFloor;
 		path.add(this.currentFloor);
 
 		Command cmd;
 		ControlCommandEnum cc;
 		while (true) {
-			cmd = controller.nextCommand();
-			cc = cmd.getControlCommand();
-			if (ControlCommandEnum.STOP == cc) {
-				stop();
-				break;
-			}
 
-			if (ControlCommandEnum.MOVE == cc) {
-				move(cmd);
+			cmd = controller.nextCommand();
+			while (cmd != null) {
+				cc = cmd.getControlCommand();
+
+				if (ControlCommandEnum.STOP == cc) {
+					stop();
+					return;
+				}
+
+				if (ControlCommandEnum.MOVE == cc) {
+					move(cmd);
+				}
+
+				cmd = cmd.getNextCommand();
 			}
 		}
 	}
 
 	public void stop() {
 		printPath();
-		
+
 		currentFloor = 0;
-		path.reset();		
+		path.reset();
 	}
 
 	public synchronized void move(Command cmd) {
