@@ -1,5 +1,3 @@
-package com.jie.elevator;
-
 public enum ControlCommandEnum {
 	MOVE((short) 1, "Move"), STOP((short) 2, "Stop");
 
