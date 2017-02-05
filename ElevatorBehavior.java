@@ -1,5 +1,3 @@
-package com.jie.elevator;
-
 public interface ElevatorBehavior {
 	public void start(int startFloor);
 
