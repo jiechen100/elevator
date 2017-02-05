@@ -1,9 +1,8 @@
-package com.jie.elevator;
-
 public class Command {
 	private ControlCommandEnum controlCommand;
 	private int fromFloorNumber;
 	private int toFloorNumber;
+	private Command nextCommand;
 
 	public Command(ControlCommandEnum todo) {
 		this.controlCommand = todo;
@@ -15,9 +14,13 @@ public class Command {
 		this.toFloorNumber = toFloorNumber;
 	}
 
-	// public int getFromFloorNumber() {
-	// return fromFloorNumber;
-	// }
+	public boolean isGoingUp() {
+		return fromFloorNumber < toFloorNumber;
+	}
+
+	public boolean isGoingDown() {
+		return fromFloorNumber > toFloorNumber;
+	}
 
 	public int getFromFloorNumber() {
 		return fromFloorNumber;
@@ -41,6 +44,14 @@ public class Command {
 
 	public void setControlCommand(ControlCommandEnum controlCommand) {
 		this.controlCommand = controlCommand;
+	}
+
+	public Command getNextCommand() {
+		return nextCommand;
+	}
+
+	public void setNextCommand(Command nextCommand) {
+		this.nextCommand = nextCommand;
 	}
 
 	@Override
