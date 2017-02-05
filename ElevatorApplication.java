@@ -33,8 +33,8 @@ public class ElevatorApplication {
 			System.out
 					.println("Usage:\tjava ElevatorApplication command-file mode");
 			System.out
-					.println("\tcommand-file: a file containging a list of elevator requests, e.g. 4-1,3-2,1-5,6-8");
-			System.out.println("\tmode: A simple mode or B complicated mode");
+					.println("\tcommand-file: a file containging the start floor and a list of elevator requests, e.g. 5:4-1,3-2,1-5,6-8");
+			System.out.println("\tmode: A - simple mode or B - complicated mode");
 			System.out
 					.println("\tFor example: java ElevatorApplication c:\\elecmds.txt A");
 		}
