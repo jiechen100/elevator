@@ -1,5 +1,3 @@
-package com.jie.elevator;
-
 public enum ElevatorRunningStrategyEnum {
 	A((short) 0, "A"), B((short) 1, "B");
 
