@@ -1,5 +1,3 @@
-package com.jie.elevator;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -98,11 +96,6 @@ public class ElevatorController {
 	}
 
 	public Command nextCommand() {
-		Command cmd = modeStrategy.nextCommand(requests);
-		// if (cmd == null) {
-		// return new Command(ControlCommandEnum.STOP);
-		// }
-
-		return cmd;
+		return modeStrategy.nextCommand(requests);
 	}
 }
